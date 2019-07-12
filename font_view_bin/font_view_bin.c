@@ -17,15 +17,9 @@
 #include "git_commit.h"
 #include "version.h"
 
-#define RET_ERROR     (1)
-#define RET_OK        (0)
-
-
-
 // ----------------------------------------------------------------------------
 // ----------------------------------------------------------------------------
 int read_file(FILE * fi, uint8_t * buf, size_t *size);
-int write_file(FILE * fi, uint8_t * buf, size_t *size);
 
 const char PRINT_HELP[] = {
 " Run & Parameters:\n\r"
@@ -53,7 +47,6 @@ int main(int argc, char* argv[])
 
 	param_opt_st param_opt;        // clean structure
 	param_opt.i_file_name = NULL;
-	param_opt.o_file_name = NULL;
 
 
 	printf( PRINT_TIRE );
@@ -131,7 +124,7 @@ int main(int argc, char* argv[])
 	printf("\n");
 	for (i=0; i<file_size_in; i++){
 		for(j=0; j<8; j++){
-			printf("%c", *(mem + i) & (0x80>>j) ? '\xb2' : ' ');
+			printf("%c", *(mem + i) & (0x80>>j) ? '#' : ' ');
 		}
         printf("\n");
 	}
