@@ -28,55 +28,13 @@ int get_opt(const int argc, char** argv, param_opt_st *param_opt)
 		
 		//printf("string = %s\n\r", argv[i]);
 		//printf("     i = %d\n\r", i);
-
-		if (strcmp("-hv", argv[i]) == 0){
-			if (i<argc){
-				i++;
-				//printf("%s\n\r", argv[i]);
-				param_opt->hversion = 0;
-				cn = conv_to_uint32((const char*)argv[i], (uint32_t*)&param_opt->hversion);
-				//printf("cn = %d\n", cn);
-				//if (cn <= 0) return -1;
-				i++;
-				res++;
-			}else return -1;
-			continue;
-		}
 		
-		if (strcmp("-v1", argv[i]) == 0){
+		if (strcmp("-r", argv[i]) == 0){
 			if (i<argc){
 				i++;
 				//printf("%s\n\r", argv[i]);
-				param_opt->v1 = 0;
-				cn = conv_to_uint32((const char*)argv[i], (uint32_t*)&param_opt->v1);
-				//printf("cn = %d\n", cn);
-				if (cn <= 0) return -1;
-				i++;
-				res++;
-			}else return -1;
-			continue;
-		}
-		
-		if (strcmp("-v2", argv[i]) == 0){
-			if (i<argc){
-				i++;
-				//printf("%s\n\r", argv[i]);
-				param_opt->v2 = 0;
-				cn = conv_to_uint32((const char*)argv[i], (uint32_t*)&param_opt->v2);
-				//printf("cn = %d\n", cn);
-				if (cn <= 0) return -1;
-				i++;
-				res++;
-			}else return -1;
-			continue;
-		}
-		
-		if (strcmp("-v3", argv[i]) == 0){
-			if (i<argc){
-				i++;
-				//printf("%s\n\r", argv[i]);
-				param_opt->v3 = 0;
-				cn = conv_to_uint32((const char*)argv[i], (uint32_t*)&param_opt->v3);
+				param_opt->rows_in_char = 0;
+				cn = conv_to_uint32((const char*)argv[i], (uint32_t*)&param_opt->rows_in_char);
 				//printf("cn = %d\n", cn);
 				if (cn <= 0) return -1;
 				i++;
@@ -96,7 +54,7 @@ int get_opt(const int argc, char** argv, param_opt_st *param_opt)
 			}else return -1;
 			continue;
 		}
-		
+		/*
 		if (strcmp("-o", argv[i]) == 0){
 			//printf("Find: --read = ");
 			if (i<argc){
@@ -108,6 +66,7 @@ int get_opt(const int argc, char** argv, param_opt_st *param_opt)
 			}else return -1;
 			continue;
 		}
+		*/
 
 		return -1;
 
