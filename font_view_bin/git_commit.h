@@ -1,4 +1,4 @@
 #ifndef GIT_COMMIT_H
 #define GIT_COMMIT_H
-const char *git_commit_str = "(2019-07-12 d65b8b7)";
+const char *git_commit_str = "(2023-05-25 070a349)";
 #endif
