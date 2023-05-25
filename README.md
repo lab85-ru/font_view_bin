@@ -1,5 +1,9 @@
 # font_view_bin
-Viewer for BIN font 8x16 or 8x8 to Console. This PRJ for Test Verilog VGA video adapter.
+Viewer for BIN font 8x16 or 8x14 or 8x12 or 8x8 to Console. 
+This PRJ for Test Verilog VGA video adapter.
+
+<img src="./image/font_view.png">
+
 
     76543210       76543210       76543210       76543210       76543210       76543210  
    +--------+     +--------+     +--------+     +--------+     +--------+     +--------+ 
