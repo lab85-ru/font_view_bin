@@ -2,7 +2,10 @@
 Viewer for BIN font 8x16 or 8x14 or 8x12 or 8x8 to Console. 
 This PRJ for Test Verilog VGA video adapter.
 
-VisualStidio 2008:
+Fonts:
+https://github.com/viler-int10h/vga-text-mode-fonts.git
+
+VisualStudio C 2008:
 <img src="./image/font_view.png">
 
 Python:
